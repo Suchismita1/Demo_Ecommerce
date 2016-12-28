@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="1" passed="1">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="32733" started-at="2016-12-28T10:58:16Z" finished-at="2016-12-28T10:58:49Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="32733" started-at="2016-12-28T10:58:16Z" finished-at="2016-12-28T10:58:49Z">
+      <class name="com.suchi.Scenarios.EcommerceTest">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.suchi.Scenarios.EcommerceTest@4b9e13df]" name="setup" is-config="true" duration-ms="24559" started-at="2016-12-28T16:28:16Z" finished-at="2016-12-28T16:28:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method status="PASS" signature="test_Home_Page()[pri:0, instance:com.suchi.Scenarios.EcommerceTest@4b9e13df]" name="test_Home_Page" duration-ms="5848" started-at="2016-12-28T16:28:41Z" finished-at="2016-12-28T16:28:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test_Home_Page -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.suchi.Scenarios.EcommerceTest@4b9e13df]" name="teardown" is-config="true" duration-ms="2312" started-at="2016-12-28T16:28:47Z" finished-at="2016-12-28T16:28:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- teardown -->
+      </class> <!-- com.suchi.Scenarios.EcommerceTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
