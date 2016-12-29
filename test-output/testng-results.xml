@@ -2,20 +2,20 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="32733" started-at="2016-12-28T10:58:16Z" finished-at="2016-12-28T10:58:49Z">
+  <suite name="Default suite" duration-ms="26542" started-at="2016-12-29T10:37:32Z" finished-at="2016-12-29T10:37:58Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="32733" started-at="2016-12-28T10:58:16Z" finished-at="2016-12-28T10:58:49Z">
+    <test name="Default test" duration-ms="26542" started-at="2016-12-29T10:37:32Z" finished-at="2016-12-29T10:37:58Z">
       <class name="com.suchi.Scenarios.EcommerceTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.suchi.Scenarios.EcommerceTest@4b9e13df]" name="setup" is-config="true" duration-ms="24559" started-at="2016-12-28T16:28:16Z" finished-at="2016-12-28T16:28:41Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.suchi.Scenarios.EcommerceTest@4b9e13df]" name="setup" is-config="true" duration-ms="6120" started-at="2016-12-29T16:07:32Z" finished-at="2016-12-29T16:07:38Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="test_Home_Page()[pri:0, instance:com.suchi.Scenarios.EcommerceTest@4b9e13df]" name="test_Home_Page" duration-ms="5848" started-at="2016-12-28T16:28:41Z" finished-at="2016-12-28T16:28:47Z">
+        <test-method status="PASS" signature="test_Home_Page()[pri:0, instance:com.suchi.Scenarios.EcommerceTest@4b9e13df]" name="test_Home_Page" duration-ms="18101" started-at="2016-12-29T16:07:38Z" finished-at="2016-12-29T16:07:56Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_Home_Page -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.suchi.Scenarios.EcommerceTest@4b9e13df]" name="teardown" is-config="true" duration-ms="2312" started-at="2016-12-28T16:28:47Z" finished-at="2016-12-28T16:28:49Z">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.suchi.Scenarios.EcommerceTest@4b9e13df]" name="teardown" is-config="true" duration-ms="2312" started-at="2016-12-29T16:07:56Z" finished-at="2016-12-29T16:07:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
