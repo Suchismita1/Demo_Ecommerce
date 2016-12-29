@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite name="Failed suite [Suite]">
+  <parameter name="Sort_Method" value="Name"/>
+  <parameter name="Product_Name" value="abcd"/>
+  <test name="Test4(failed)">
+    <parameter name="Sort_Method" value="Name"/>
+    <parameter name="Product_Name" value="abcd"/>
     <classes>
       <class name="com.suchi.Scenarios.EcommerceTest">
         <methods>
-          <include name="test_Home_Page"/>
+          <include name="test_Home_Page" invocation-numbers="0"/>
           <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="setup"/>
+          <include name="teardown"/>
+          <include name="teardown"/>
+          <include name="teardown"/>
           <include name="teardown"/>
         </methods>
       </class> <!-- com.suchi.Scenarios.EcommerceTest -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test4(failed) -->
+</suite> <!-- Failed suite [Suite] -->

@@ -10,6 +10,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.suchi.PageObject.MobilePage;
@@ -29,8 +30,9 @@ public class EcommerceTest {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(WebUtil.WAIT_TIME, TimeUnit.SECONDS);
 	}
+	@Parameters({"Sort_Method","Product_Name"})
 	@Test
-	public void test_Home_Page() throws Exception{
+	public void test_Home_Page(String Sort_Method,String Product_Name) throws Exception{
 		//Goto URL
 		SignInPage signinPage = WebUtil.getSigninPage(driver);
 		System.out.println("Title is: "+driver.getTitle());
@@ -45,7 +47,8 @@ public class EcommerceTest {
 		mobilePage.verifyMobilePageTitle(driver);
 		
 		//Sort the displayed item by Name
-		mobilePage.selectSortBy(driver,"Name");
+		//mobilePage.selectSortBy(driver,"Name");
+		mobilePage.selectSortBy(driver,Sort_Method);
 		
 		//Get the list of product
 		List<WebElement> ProductList = mobilePage.getAllProducts(driver);
@@ -54,13 +57,16 @@ public class EcommerceTest {
 		mobilePage.verifyProductSorting(driver,ProductList);
 		
 		//Read the user's choice mobile cost
-		String Visible_Price = mobilePage.searchProductCost(driver,ProductList,"Samsung Galaxy");
+		//String Visible_Price = mobilePage.searchProductCost(driver,ProductList,"Samsung Galaxy");
+		String Visible_Price = mobilePage.searchProductCost(driver,ProductList,Product_Name);
 		
 		//Click on the user's choice Product
-		ProductPage productPage = mobilePage.clickOnProduct(driver,"Samsung Galaxy");
+		//ProductPage productPage = mobilePage.clickOnProduct(driver,"Samsung Galaxy");
+		ProductPage productPage = mobilePage.clickOnProduct(driver,Product_Name);
 		
 		//Get the Product price on Product details page
-		String Actual_price = productPage.getProductDetailPrice(driver,"Samsung Galaxy");
+		//String Actual_price = productPage.getProductDetailPrice(driver,"Samsung Galaxy");
+		String Actual_price = productPage.getProductDetailPrice(driver,Product_Name);
 		
 		//Verify the detail price of product with visible product price on Mobile home page
 		Assert.assertEquals(Actual_price, Visible_Price);
