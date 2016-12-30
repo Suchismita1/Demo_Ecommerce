@@ -4,6 +4,7 @@ import java.util.Collections;
 import java.util.List;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
@@ -88,9 +89,35 @@ public class MobilePage {
 	}
 
 	public ProductPage clickOnProduct(WebDriver driver, String productName) {
+		try
+		{
 		String Product_Link_xpath= "//*[contains(text(),'"+productName+"')]";
 		driver.findElement(By.xpath(Product_Link_xpath)).click();
-		return PageFactory.initElements(driver, ProductPage.class);
 		
+		}
+		catch(ElementNotFoundException e){
+			System.out.println("No such product found :"+e.toString());
+		}
+		return PageFactory.initElements(driver, ProductPage.class);
+	}
+
+	public ShoppingCartPage clickOnAddToCart(WebDriver driver, String productName) {
+		String Add_to_Cart_button_xpath = "//*[contains(text(),'"+productName+"')]//following::button/span";
+		WebElement Add_to_cart_button = driver.findElement(By.xpath(Add_to_Cart_button_xpath));
+		try
+		{
+			if(Add_to_cart_button!=null)
+			{
+				Add_to_cart_button.click();
+			}
+			else
+			{
+				System.out.println("Element not found");
+			}
+		}
+		catch(NoSuchElementException e){
+			System.out.println(e.toString());
+		}
+		return PageFactory.initElements(driver, ShoppingCartPage.class);
 	}
 }

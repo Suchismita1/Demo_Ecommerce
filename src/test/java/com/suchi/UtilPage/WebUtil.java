@@ -26,6 +26,8 @@ public class WebUtil {
 	public static final String WELCOME_MSG = "DEFAULT WELCOME MSG!";
 	
 	public static final String MOBILE_PAGE_TITLE = "MOBILE";
+
+	public static final String EXPECTED_ERROR_MSG = "* The maximum quantity allowed for purchase is 500.";
 	
 	public MobilePage mobilePage;
 	public ProductPage productPage;
@@ -46,6 +48,11 @@ public class WebUtil {
 		String currentDir = "src/test/resources";
 		FileUtils.copyFile(scrFile, new File(currentDir + "\\screenshots\\" + System.currentTimeMillis() + ".png"));
 		//FileUtils.copyFile(scrFile, new File("src/test/resources/Screenshot/test.png"));
+	}
+
+	public static void navigateBackMenu(WebDriver driver) {
+		driver.navigate().back();
+		
 	}
 	
 }

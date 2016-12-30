@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" total="4" passed="3">
+<testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="131370" started-at="2016-12-29T11:03:08Z" finished-at="2016-12-29T11:05:19Z">
+  <suite name="Suite" duration-ms="30198" started-at="2016-12-30T07:44:33Z" finished-at="2016-12-30T07:45:04Z">
     <groups>
     </groups>
-    <test name="Test1" duration-ms="25545" started-at="2016-12-29T11:03:08Z" finished-at="2016-12-29T11:03:33Z">
+    <test name="Test1" duration-ms="30198" started-at="2016-12-30T07:44:33Z" finished-at="2016-12-30T07:45:04Z">
       <class name="com.suchi.Scenarios.EcommerceTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.suchi.Scenarios.EcommerceTest@26be92ad]" name="setup" is-config="true" duration-ms="6119" started-at="2016-12-29T16:33:08Z" finished-at="2016-12-29T16:33:14Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.suchi.Scenarios.EcommerceTest@26be92ad]" name="setup" is-config="true" duration-ms="6584" started-at="2016-12-30T13:14:33Z" finished-at="2016-12-30T13:14:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="test_Home_Page(java.lang.String, java.lang.String)[pri:0, instance:com.suchi.Scenarios.EcommerceTest@26be92ad]" name="test_Home_Page" duration-ms="17105" started-at="2016-12-29T16:33:14Z" finished-at="2016-12-29T16:33:31Z">
+        <test-method status="PASS" signature="test_Home_Page(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.suchi.Scenarios.EcommerceTest@26be92ad]" name="test_Home_Page" duration-ms="21291" started-at="2016-12-30T13:14:40Z" finished-at="2016-12-30T13:15:01Z">
           <params>
             <param index="0">
               <value>
@@ -23,165 +23,20 @@
                 <![CDATA[Sony Xperia]]>
               </value>
             </param>
+            <param index="2">
+              <value>
+                <![CDATA[502]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_Home_Page -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.suchi.Scenarios.EcommerceTest@26be92ad]" name="teardown" is-config="true" duration-ms="2311" started-at="2016-12-29T16:33:31Z" finished-at="2016-12-29T16:33:33Z">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.suchi.Scenarios.EcommerceTest@26be92ad]" name="teardown" is-config="true" duration-ms="2315" started-at="2016-12-30T13:15:01Z" finished-at="2016-12-30T13:15:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
       </class> <!-- com.suchi.Scenarios.EcommerceTest -->
     </test> <!-- Test1 -->
-    <test name="Test2" duration-ms="27133" started-at="2016-12-29T11:03:33Z" finished-at="2016-12-29T11:04:00Z">
-      <class name="com.suchi.Scenarios.EcommerceTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.suchi.Scenarios.EcommerceTest@5442a311]" name="setup" is-config="true" duration-ms="5248" started-at="2016-12-29T16:33:33Z" finished-at="2016-12-29T16:33:38Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="test_Home_Page(java.lang.String, java.lang.String)[pri:0, instance:com.suchi.Scenarios.EcommerceTest@5442a311]" name="test_Home_Page" duration-ms="19573" started-at="2016-12-29T16:33:38Z" finished-at="2016-12-29T16:33:58Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Name]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[IPhone]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_Home_Page -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.suchi.Scenarios.EcommerceTest@5442a311]" name="teardown" is-config="true" duration-ms="2310" started-at="2016-12-29T16:33:58Z" finished-at="2016-12-29T16:34:00Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- com.suchi.Scenarios.EcommerceTest -->
-    </test> <!-- Test2 -->
-    <test name="Test3" duration-ms="28104" started-at="2016-12-29T11:04:00Z" finished-at="2016-12-29T11:04:28Z">
-      <class name="com.suchi.Scenarios.EcommerceTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.suchi.Scenarios.EcommerceTest@754ba872]" name="setup" is-config="true" duration-ms="5221" started-at="2016-12-29T16:34:00Z" finished-at="2016-12-29T16:34:05Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="PASS" signature="test_Home_Page(java.lang.String, java.lang.String)[pri:0, instance:com.suchi.Scenarios.EcommerceTest@754ba872]" name="test_Home_Page" duration-ms="20571" started-at="2016-12-29T16:34:05Z" finished-at="2016-12-29T16:34:26Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Name]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Samsung Galaxy]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_Home_Page -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.suchi.Scenarios.EcommerceTest@754ba872]" name="teardown" is-config="true" duration-ms="2310" started-at="2016-12-29T16:34:26Z" finished-at="2016-12-29T16:34:28Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- com.suchi.Scenarios.EcommerceTest -->
-    </test> <!-- Test3 -->
-    <test name="Test4" duration-ms="50557" started-at="2016-12-29T11:04:28Z" finished-at="2016-12-29T11:05:19Z">
-      <class name="com.suchi.Scenarios.EcommerceTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.suchi.Scenarios.EcommerceTest@239963d8]" name="setup" is-config="true" duration-ms="5261" started-at="2016-12-29T16:34:28Z" finished-at="2016-12-29T16:34:34Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method status="FAIL" signature="test_Home_Page(java.lang.String, java.lang.String)[pri:0, instance:com.suchi.Scenarios.EcommerceTest@239963d8]" name="test_Home_Page" duration-ms="42979" started-at="2016-12-29T16:34:34Z" finished-at="2016-12-29T16:35:17Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Name]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[abcd]]>
-              </value>
-            </param>
-          </params>
-          <exception class="org.openqa.selenium.NoSuchElementException">
-            <message>
-              <![CDATA[no such element: Unable to locate element: {"method":"xpath","selector":"//*[contains(text(),'abcd')]"}
-  (Session info: chrome=55.0.2883.87)
-  (Driver info: chromedriver=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 30.04 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
-System info: host: 'EPINHYDW0897', ip: '10.6.11.150', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_111'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9), userDataDir=C:\Users\SUCHIS~1\AppData\Local\Temp\scoped_dir16536_7577}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=55.0.2883.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: 6484c46864b0f05a4dfad07754b819fb
-*** Element info: {Using=xpath, value=//*[contains(text(),'abcd')]}]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//*[contains(text(),'abcd')]"}
-  (Session info: chrome=55.0.2883.87)
-  (Driver info: chromedriver=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
-Command duration or timeout: 30.04 seconds
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '2.53.1', revision: 'a36b8b1cd5757287168e54b817830adce9b0158d', time: '2016-06-30 19:26:09'
-System info: host: 'EPINHYDW0897', ip: '10.6.11.150', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_111'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.27.440174 (e97a722caafc2d3a8b807ee115bfb307f7d2cfd9), userDataDir=C:\Users\SUCHIS~1\AppData\Local\Temp\scoped_dir16536_7577}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=55.0.2883.87, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
-Session ID: 6484c46864b0f05a4dfad07754b819fb
-*** Element info: {Using=xpath, value=//*[contains(text(),'abcd')]}
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
-	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
-	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:363)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:500)
-	at org.openqa.selenium.By$ByXPath.findElement(By.java:361)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:355)
-	at com.suchi.PageObject.MobilePage.clickOnProduct(MobilePage.java:92)
-	at com.suchi.Scenarios.EcommerceTest.test_Home_Page(EcommerceTest.java:65)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-	at java.lang.reflect.Method.invoke(Method.java:498)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:80)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:714)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:901)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1231)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:127)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:111)
-	at org.testng.TestRunner.privateRun(TestRunner.java:767)
-	at org.testng.TestRunner.run(TestRunner.java:617)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:334)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:329)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:291)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:240)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1198)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1123)
-	at org.testng.TestNG.run(TestNG.java:1031)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:236)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:81)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test_Home_Page -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.suchi.Scenarios.EcommerceTest@239963d8]" name="teardown" is-config="true" duration-ms="2313" started-at="2016-12-29T16:35:17Z" finished-at="2016-12-29T16:35:19Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- teardown -->
-      </class> <!-- com.suchi.Scenarios.EcommerceTest -->
-    </test> <!-- Test4 -->
   </suite> <!-- Suite -->
 </testng-results>
