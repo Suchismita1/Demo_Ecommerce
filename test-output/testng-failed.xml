@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]">
-  <parameter name="quantity" value="502"/>
+  <parameter name="quantity" value="52"/>
   <parameter name="Sort_Method" value="Name"/>
   <parameter name="Product_Name" value="Sony Xperia"/>
   <test name="Test1(failed)">
-    <parameter name="quantity" value="502"/>
+    <parameter name="quantity" value="52"/>
     <parameter name="Sort_Method" value="Name"/>
     <parameter name="Product_Name" value="Sony Xperia"/>
     <classes>

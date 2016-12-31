@@ -4,7 +4,7 @@
  <test name="Test1">
   <parameter name="Sort_Method" value="Name"/>
 	<parameter name="Product_Name" value="Sony Xperia"/>
-	<parameter name="quantity" value="502"/>
+	<parameter name="quantity" value="52"/>
     <classes>
       <class name="com.suchi.Scenarios.EcommerceTest"/>
     </classes>

@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="30198" started-at="2016-12-30T07:44:33Z" finished-at="2016-12-30T07:45:04Z">
+  <suite name="Suite" duration-ms="64705" started-at="2016-12-31T14:43:03Z" finished-at="2016-12-31T14:44:08Z">
     <groups>
     </groups>
-    <test name="Test1" duration-ms="30198" started-at="2016-12-30T07:44:33Z" finished-at="2016-12-30T07:45:04Z">
+    <test name="Test1" duration-ms="64705" started-at="2016-12-31T14:43:03Z" finished-at="2016-12-31T14:44:08Z">
       <class name="com.suchi.Scenarios.EcommerceTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.suchi.Scenarios.EcommerceTest@26be92ad]" name="setup" is-config="true" duration-ms="6584" started-at="2016-12-30T13:14:33Z" finished-at="2016-12-30T13:14:40Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.suchi.Scenarios.EcommerceTest@26be92ad]" name="setup" is-config="true" duration-ms="6007" started-at="2016-12-31T20:13:03Z" finished-at="2016-12-31T20:13:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="test_Home_Page(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.suchi.Scenarios.EcommerceTest@26be92ad]" name="test_Home_Page" duration-ms="21291" started-at="2016-12-30T13:14:40Z" finished-at="2016-12-30T13:15:01Z">
+        <test-method status="PASS" signature="test_Home_Page(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.suchi.Scenarios.EcommerceTest@26be92ad]" name="test_Home_Page" duration-ms="56352" started-at="2016-12-31T20:13:09Z" finished-at="2016-12-31T20:14:05Z">
           <params>
             <param index="0">
               <value>
@@ -25,14 +25,14 @@
             </param>
             <param index="2">
               <value>
-                <![CDATA[502]]>
+                <![CDATA[52]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_Home_Page -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.suchi.Scenarios.EcommerceTest@26be92ad]" name="teardown" is-config="true" duration-ms="2315" started-at="2016-12-30T13:15:01Z" finished-at="2016-12-30T13:15:04Z">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.suchi.Scenarios.EcommerceTest@26be92ad]" name="teardown" is-config="true" duration-ms="2317" started-at="2016-12-31T20:14:05Z" finished-at="2016-12-31T20:14:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

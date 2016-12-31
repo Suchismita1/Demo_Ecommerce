@@ -10,37 +10,64 @@ import com.suchi.UtilPage.WebUtil;
 
 public class ShoppingCartPage {
 	
-	public void addQuantity(WebDriver driver, String quantity) {
+	public void addQuantity(WebDriver driver, String quantity) throws Exception {
 		WebElement quantity_input_box = driver.findElement(By.xpath("//*[@id='shopping-cart-table']/tbody/tr/td[4]/input"));
 		quantity_input_box.clear();
 		quantity_input_box.sendKeys(quantity);
 		clickUpdateButton(driver);
-		String actual_error_msg = driver.findElement(By.xpath("//*[@class='item-msg error']")).getText();
+		
 		try{
+			String actual_error_msg = driver.findElement(By.xpath("//*[@class='item-msg error']")).getText();
+			
 			if(actual_error_msg.equalsIgnoreCase(WebUtil.EXPECTED_ERROR_MSG))
 			{
 				clickEmptyCartButton(driver);
-				//verifyEmptyCart(driver);
+				Thread.sleep(2000);
+				verifyEmptyCart(driver);
+				
 			}
 			else{
 				System.out.println("Test case failed");
 			}
+			
 		}
-		catch(Exception ex){
+		catch(NoSuchElementException ex){
+			//ex.printStackTrace();	
+			System.out.println("Update success");
 			verifyQuantityInCart(driver,quantity);
 			clickEmptyCartButton(driver);
+			Thread.sleep(2000);
+			verifyEmptyCart(driver);
+			 
 		}
+	
 	}
 
 	public void verifyEmptyCart(WebDriver driver) {
-		String cart_quantity = driver.findElement(By.className("count")).getText();
-		String expected_quantity = "0";
-		Assert.assertEquals(cart_quantity, expected_quantity);
+		WebElement cart_button= driver.findElement(By.linkText("CART"));
+		cart_button.click();
+		
+		String actual_Cart_msg = driver.findElement(By.xpath("//*[@id='header-cart']/div[3]/p[2]")).getText();
+		try
+		{
+			Assert.assertEquals(actual_Cart_msg, WebUtil.EXPECTED_CART_MSG);
+		}
+		catch(Exception e)
+		{
+			
+		}
 	}
 
 	public void verifyQuantityInCart(WebDriver driver, String quantity) {
 		String cart_quantity = driver.findElement(By.className("count")).getText();
+		System.out.println("Updated quantity: "+cart_quantity);
+		try{
 		Assert.assertEquals(quantity, cart_quantity);
+		}
+		catch(Exception e)
+		{
+			
+		}
 	}
 
 	public void clickEmptyCartButton(WebDriver driver) {

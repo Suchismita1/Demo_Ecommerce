@@ -28,6 +28,8 @@ public class WebUtil {
 	public static final String MOBILE_PAGE_TITLE = "MOBILE";
 
 	public static final String EXPECTED_ERROR_MSG = "* The maximum quantity allowed for purchase is 500.";
+
+	public static final String EXPECTED_CART_MSG = "You have no items in your shopping cart.";
 	
 	public MobilePage mobilePage;
 	public ProductPage productPage;
