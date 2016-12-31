@@ -2,9 +2,11 @@ package com.suchi.PageObject;
 
 import java.util.Collections;
 import java.util.List;
+import java.util.Set;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
+import org.openqa.selenium.NoSuchWindowException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
@@ -119,5 +121,70 @@ public class MobilePage {
 			System.out.println(e.toString());
 		}
 		return PageFactory.initElements(driver, ShoppingCartPage.class);
+	}
+
+	public void addMobileToCompare(WebDriver driver, String product_choice_1, String product_choice_2) {
+		addProductToCompareList(driver,product_choice_1);
+		addProductToCompareList(driver,product_choice_2);
+		
+	}
+
+	public void addProductToCompareList(WebDriver driver, String product_choice) {
+		try{
+		String Add_to_Copmare_xpath = "//*[contains(text(),'"+product_choice+"')]//following::a[contains(text(),'Add to Compare')]";
+		WebElement Add_To_Compare_button = driver.findElement(By.xpath(Add_to_Copmare_xpath));
+		Add_To_Compare_button.click();
+		}
+		catch(NoSuchElementException ex)
+		{
+			System.out.println(ex.toString());
+		}
+		
+	}
+
+	public void clickCompareButton(WebDriver driver) {
+		try
+		{
+			WebElement Compare_button = driver.findElement(By.xpath("//*[@id='compare-items']//following::button"));
+			Compare_button.click();
+			String WinHandleParent = driver.getWindowHandle();
+			try{
+				Set<String> handles =  driver.getWindowHandles();
+				for(String winHandle : handles)
+				{
+					if(!winHandle.equals(WinHandleParent))
+					{
+						driver.switchTo().window(winHandle);
+						checkProductOnComaprePage(driver);
+						driver.close();
+						driver.switchTo().window(WinHandleParent);
+					}
+				}
+			}
+			catch(NoSuchWindowException e)
+			{
+				
+			}
+		}
+		catch(NoSuchElementException ex)
+		{
+			System.out.println(ex.toString());
+		}
+		
+	}
+
+	public void checkProductOnComaprePage(WebDriver driver) {
+		try{
+			List<WebElement> compare_pro_list = driver.findElements(By.className("product-name"));
+			
+			for(int i=0; i<compare_pro_list.size();i++)
+			{
+				System.out.println("Product on comapre list :"+compare_pro_list.get(i).getText());
+			}
+			
+		}catch(NoSuchElementException e){
+			
+		}
+		
 	}
 }

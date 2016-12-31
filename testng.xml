@@ -5,20 +5,28 @@
   <parameter name="Sort_Method" value="Name"/>
 	<parameter name="Product_Name" value="Sony Xperia"/>
 	<parameter name="quantity" value="52"/>
+	<parameter name="Product_choice_1" value="Sony Xperia"/>
+	<parameter name="Product_choice_2" value="IPhone"/>
     <classes>
       <class name="com.suchi.Scenarios.EcommerceTest"/>
     </classes>
   </test>
- <!--   <test name="Test2">
+ <!--  <test name="Test2">
   <parameter name="Sort_Method" value="Name"/>
 	<parameter name="Product_Name" value="IPhone"/>
+	<parameter name="quantity" value="502"/>
+	<parameter name="Product_choice_1" value="Sony Xperia"/>
+	<parameter name="Product_choice_2" value="IPhone"/>
     <classes>
       <class name="com.suchi.Scenarios.EcommerceTest"/>
     </classes>
   </test>  
-  <test name="Test3">
+<test name="Test3">
   <parameter name="Sort_Method" value="Name"/>
 	<parameter name="Product_Name" value="Samsung Galaxy"/>
+	<parameter name="quantity" value="52"/>
+	<parameter name="Product_choice_1" value="Sony Xperia"/>
+	<parameter name="Product_choice_2" value="IPhone"/>
     <classes>
       <class name="com.suchi.Scenarios.EcommerceTest"/>
     </classes>
@@ -26,6 +34,9 @@
   <test name="Test4">
   <parameter name="Sort_Method" value="Name"/>
 	<parameter name="Product_Name" value="abcd"/>
+	<parameter name="quantity" value="52"/>
+	<parameter name="Product_choice_1" value="Sony Xperia"/>
+	<parameter name="Product_choice_2" value="IPhone"/>
     <classes>
       <class name="com.suchi.Scenarios.EcommerceTest"/>
     </classes>

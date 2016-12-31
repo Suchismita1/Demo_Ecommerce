@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="64705" started-at="2016-12-31T14:43:03Z" finished-at="2016-12-31T14:44:08Z">
+  <suite name="Suite" duration-ms="65655" started-at="2016-12-31T17:52:42Z" finished-at="2016-12-31T17:53:47Z">
     <groups>
     </groups>
-    <test name="Test1" duration-ms="64705" started-at="2016-12-31T14:43:03Z" finished-at="2016-12-31T14:44:08Z">
+    <test name="Test1" duration-ms="65655" started-at="2016-12-31T17:52:42Z" finished-at="2016-12-31T17:53:47Z">
       <class name="com.suchi.Scenarios.EcommerceTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.suchi.Scenarios.EcommerceTest@26be92ad]" name="setup" is-config="true" duration-ms="6007" started-at="2016-12-31T20:13:03Z" finished-at="2016-12-31T20:13:09Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.suchi.Scenarios.EcommerceTest@26be92ad]" name="setup" is-config="true" duration-ms="5645" started-at="2016-12-31T23:22:42Z" finished-at="2016-12-31T23:22:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="test_Home_Page(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.suchi.Scenarios.EcommerceTest@26be92ad]" name="test_Home_Page" duration-ms="56352" started-at="2016-12-31T20:13:09Z" finished-at="2016-12-31T20:14:05Z">
+        <test-method status="PASS" signature="test_Home_Page(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.suchi.Scenarios.EcommerceTest@26be92ad]" name="test_Home_Page" duration-ms="57652" started-at="2016-12-31T23:22:47Z" finished-at="2016-12-31T23:23:45Z">
           <params>
             <param index="0">
               <value>
@@ -28,11 +28,21 @@
                 <![CDATA[52]]>
               </value>
             </param>
+            <param index="3">
+              <value>
+                <![CDATA[Sony Xperia]]>
+              </value>
+            </param>
+            <param index="4">
+              <value>
+                <![CDATA[IPhone]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_Home_Page -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.suchi.Scenarios.EcommerceTest@26be92ad]" name="teardown" is-config="true" duration-ms="2317" started-at="2016-12-31T20:14:05Z" finished-at="2016-12-31T20:14:08Z">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.suchi.Scenarios.EcommerceTest@26be92ad]" name="teardown" is-config="true" duration-ms="2342" started-at="2016-12-31T23:23:45Z" finished-at="2016-12-31T23:23:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

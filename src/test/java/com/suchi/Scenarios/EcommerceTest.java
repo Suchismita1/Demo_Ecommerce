@@ -31,9 +31,9 @@ public class EcommerceTest {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(WebUtil.WAIT_TIME, TimeUnit.SECONDS);
 	}
-	@Parameters({"Sort_Method","Product_Name","quantity"})
+	@Parameters({"Sort_Method","Product_Name","quantity","Product_choice_1","Product_choice_2"})
 	@Test
-	public void test_Home_Page(String Sort_Method,String Product_Name, String quantity) throws Exception{
+	public void test_Home_Page(String Sort_Method,String Product_Name, String quantity, String Product_choice_1, String Product_choice_2) throws Exception{
 		//Goto URL
 		SignInPage signinPage = WebUtil.getSigninPage(driver);
 		System.out.println("Title is: "+driver.getTitle());
@@ -77,7 +77,18 @@ public class EcommerceTest {
 		//Send quantity to the quantity input box
 		shoppingCart.addQuantity(driver, quantity);
 		
+		//Navigate to Mobile Page
+		signinPage.clickMobileMenu(driver);
+		
+		//Add 2 mobile to Compare
+		mobilePage.addMobileToCompare(driver,Product_choice_1,Product_choice_2);
+		
+		//Click the compare button and switch to compare window
+		mobilePage.clickCompareButton(driver);
+		
+		
 	}
+	
 	@AfterTest
 	public void teardown()
 	{

@@ -3,19 +3,20 @@
 <suite name="Failed suite [Suite]">
   <parameter name="quantity" value="52"/>
   <parameter name="Sort_Method" value="Name"/>
-  <parameter name="Product_Name" value="Sony Xperia"/>
-  <test name="Test1(failed)">
-    <parameter name="quantity" value="52"/>
+  <parameter name="Product_Name" value="IPhone"/>
+  <test name="Test2(failed)">
     <parameter name="Sort_Method" value="Name"/>
-    <parameter name="Product_Name" value="Sony Xperia"/>
+    <parameter name="Product_Name" value="IPhone"/>
     <classes>
       <class name="com.suchi.Scenarios.EcommerceTest">
         <methods>
-          <include name="test_Home_Page" invocation-numbers="0"/>
+          <include name="test_Home_Page"/>
           <include name="setup"/>
+          <include name="setup"/>
+          <include name="teardown"/>
           <include name="teardown"/>
         </methods>
       </class> <!-- com.suchi.Scenarios.EcommerceTest -->
     </classes>
-  </test> <!-- Test1(failed) -->
+  </test> <!-- Test2(failed) -->
 </suite> <!-- Failed suite [Suite] -->
