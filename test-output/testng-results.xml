@@ -1,17 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="65655" started-at="2016-12-31T17:52:42Z" finished-at="2016-12-31T17:53:47Z">
+  <suite name="Suite" duration-ms="75814" started-at="2017-01-02T17:02:19Z" finished-at="2017-01-02T17:03:35Z">
     <groups>
     </groups>
-    <test name="Test1" duration-ms="65655" started-at="2016-12-31T17:52:42Z" finished-at="2016-12-31T17:53:47Z">
+    <test name="Test1" duration-ms="75814" started-at="2017-01-02T17:02:19Z" finished-at="2017-01-02T17:03:35Z">
       <class name="com.suchi.Scenarios.EcommerceTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.suchi.Scenarios.EcommerceTest@26be92ad]" name="setup" is-config="true" duration-ms="5645" started-at="2016-12-31T23:22:42Z" finished-at="2016-12-31T23:22:47Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.suchi.Scenarios.EcommerceTest@26be92ad]" name="setup" is-config="true" duration-ms="9854" started-at="2017-01-02T22:32:19Z" finished-at="2017-01-02T22:32:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="test_Home_Page(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.suchi.Scenarios.EcommerceTest@26be92ad]" name="test_Home_Page" duration-ms="57652" started-at="2016-12-31T23:22:47Z" finished-at="2016-12-31T23:23:45Z">
+        <test-method status="PASS" signature="Test_Account_Creation()[pri:0, instance:com.suchi.Scenarios.EcommerceTest@26be92ad]" name="Test_Account_Creation" duration-ms="6248" started-at="2017-01-02T22:32:29Z" finished-at="2017-01-02T22:32:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_Account_Creation -->
+        <test-method status="PASS" signature="test_Home_Page(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.suchi.Scenarios.EcommerceTest@26be92ad]" name="test_Home_Page" duration-ms="57526" started-at="2017-01-02T22:32:35Z" finished-at="2017-01-02T22:33:33Z">
           <params>
             <param index="0">
               <value>
@@ -42,7 +46,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_Home_Page -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.suchi.Scenarios.EcommerceTest@26be92ad]" name="teardown" is-config="true" duration-ms="2342" started-at="2016-12-31T23:23:45Z" finished-at="2016-12-31T23:23:47Z">
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.suchi.Scenarios.EcommerceTest@26be92ad]" name="teardown" is-config="true" duration-ms="2136" started-at="2017-01-02T22:33:33Z" finished-at="2017-01-02T22:33:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
