@@ -16,6 +16,7 @@ import org.testng.annotations.Test;
 import com.gargoylesoftware.htmlunit.Page;
 import com.suchi.PageObject.AccountPage;
 import com.suchi.PageObject.CreateAccountPage;
+import com.suchi.PageObject.DashBoard;
 import com.suchi.PageObject.MobilePage;
 import com.suchi.PageObject.ProductPage;
 import com.suchi.PageObject.ShoppingCartPage;
@@ -34,7 +35,7 @@ public class EcommerceTest {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(WebUtil.WAIT_TIME, TimeUnit.SECONDS);
 	}
-	@Parameters({"Sort_Method","Product_Name","quantity","Product_choice_1","Product_choice_2","First_Name","Last_Name","Email","password","Confirmpassword"})
+	@Parameters({"Sort_Method","Product_Name","quantity","Product_choice_1","Product_choice_2"})
 	@Test
 	public void test_Home_Page(String Sort_Method,String Product_Name, String quantity, String Product_choice_1, String Product_choice_2) throws Exception{
 		/*DAY1 SCENARIOS:
@@ -50,7 +51,7 @@ public class EcommerceTest {
 		System.out.println("Title is: "+driver.getTitle());
 		
 		//Verify the title of the URL
-		signinPage.verifyWelcomeMsg(driver);
+		//signinPage.verifyWelcomeMsg(driver);
 		
 		//Click on MOBILE Menu option
 		MobilePage mobilePage = signinPage.clickMobileMenu(driver);
@@ -137,8 +138,9 @@ public class EcommerceTest {
 	9.  In the next page enter Email and message and click SHARE WISHLIST
 	10. Check wishlist is shared */
 	
+	@Parameters({"First_Name","Last_Name","Email","password","Confirmpassword","Wish_TV_Name","Message"})
 	@Test
-	public void Test_Account_Creation(String First_Name, String Last_Name, String Email, String password, String Confirmpassword)
+	public void Test_Account_Creation(String First_Name, String Last_Name, String Email, String password, String Confirmpassword, String Wish_TV_Name, String Message)
 	{
 		//Goto URL
 		SignInPage signinPage = WebUtil.getSigninPage(driver);
@@ -150,8 +152,22 @@ public class EcommerceTest {
 		CreateAccountPage createAccount = accountPage.click_Account_Creation(driver);
 		
 		//Fill the user details and click register
-		createAccount.fillNewUserDetails(driver,First_Name,Last_Name,Email,password,Confirmpassword);
+		DashBoard dashboard = createAccount.fillNewUserDetails(driver,First_Name,Last_Name,Email,password,Confirmpassword);
 		
+		//Go to TV menu from the DashBoard page
+		dashboard.clickTVMenu(driver);
+		
+		//Add Product to your WishList
+		dashboard.addTVtoWishList(driver,Wish_TV_Name);
+		
+		//Click on Share WishList
+		dashboard.clickShareWishlistButton(driver);
+		
+		//In the next page enter Email and message and click SHARE WISHLIST
+		dashboard.enterSharingDeatils(driver,Email,Message);
+		
+		//Check wishlist is shared
+		dashboard.verifySharing(driver);
 	}
 	
 	@AfterTest

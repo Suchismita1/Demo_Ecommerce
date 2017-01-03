@@ -31,6 +31,14 @@ public class WebUtil {
 
 	public static final String EXPECTED_CART_MSG = "You have no items in your shopping cart.";
 	
+	public static final String EXPECETD_VALIDATION_ADVICE = "This is a required field.";
+	
+	public static final String EXP_REG_SUCCESS_MSG = "Thank you for registering with Main Website Store.";
+	
+	public static final String EXP_REG_FAILURE_MSG= "There is already an account with this email address.";
+	
+	public static final String EXP_WISHLIST_SUCCESS_MSG = "Your Wishlist has been shared.";
+	
 	public MobilePage mobilePage;
 	public ProductPage productPage;
 	
