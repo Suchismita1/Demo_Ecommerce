@@ -36,7 +36,7 @@ public class EcommerceTest {
 		driver.manage().timeouts().implicitlyWait(WebUtil.WAIT_TIME, TimeUnit.SECONDS);
 	}
 	@Parameters({"Sort_Method","Product_Name","quantity","Product_choice_1","Product_choice_2"})
-	@Test
+	@Test(priority=1)
 	public void test_Home_Page(String Sort_Method,String Product_Name, String quantity, String Product_choice_1, String Product_choice_2) throws Exception{
 		/*DAY1 SCENARIOS:
 			1.  Go to http://live.guru99.com/index.php/
@@ -138,9 +138,9 @@ public class EcommerceTest {
 	9.  In the next page enter Email and message and click SHARE WISHLIST
 	10. Check wishlist is shared */
 	
-	@Parameters({"First_Name","Last_Name","Email","password","Confirmpassword","Wish_TV_Name","Message"})
-	@Test
-	public void Test_Account_Creation(String First_Name, String Last_Name, String Email, String password, String Confirmpassword, String Wish_TV_Name, String Message)
+	/*@Parameters({"First_Name","Last_Name","Email","password","Confirmpassword","Wish_TV_Name","Message"})
+	@Test(priority=2)
+	public void Test_Account_Creation(String First_Name, String Last_Name, String Email, String password, String Confirmpassword, String Wish_TV_Name, String Message) throws Exception
 	{
 		//Goto URL
 		SignInPage signinPage = WebUtil.getSigninPage(driver);
@@ -168,6 +168,34 @@ public class EcommerceTest {
 		
 		//Check wishlist is shared
 		dashboard.verifySharing(driver);
+		
+		//Click on Logout
+		dashboard.clickLogout(driver);
+	}*/
+	
+	/*DAY6 SCENARIOS:
+	 * Verify user is able to purchase product using registered email id */
+	@Parameters({"Email","password","Wish_TV_Name"})
+	@Test(priority=3)
+	public void Test_Purchase_Product(String Email, String password, String Wish_TV_Name) throws Exception
+	{
+		
+		//  Go to http://live.guru99.com/index.php/
+		SignInPage signinPage = WebUtil.getSigninPage(driver);
+		
+		//Click on 'MY ACCOUNT' link
+		AccountPage accountPage = signinPage.clcikMyAccount(driver);
+		
+		//Login in application using previously created user details
+		DashBoard dashboard = accountPage.click_Account_Login(driver,Email,password);
+		
+		//Click on my wishList link
+		dashboard.clickMyWishList(driver);
+		
+		//Click Add to cart to the respective product
+		dashboard.AddProductToCart(driver,Wish_TV_Name);
+		
+		
 	}
 	
 	@AfterTest

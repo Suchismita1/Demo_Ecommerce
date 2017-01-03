@@ -2,20 +2,21 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
  <test name="Test1">
-  <parameter name="Sort_Method" value="Name"/>
+ <parameter name="Sort_Method" value="Name"/>
 	<parameter name="Product_Name" value="Sony Xperia"/>
 	<parameter name="quantity" value="502"/>
 	<parameter name="Product_choice_1" value="Sony Xperia"/>
 	<parameter name="Product_choice_2" value="IPhone"/>
-	<parameter name="First_Name" value="Suchi1"/>
-	<parameter name="Last_Name" value="Smita3"/>
-	<parameter name="Email" value="Suchi1.smita3@gmail.com"/>
+	<!-- <parameter name="First_Name" value="Suchi5"/>
+	<parameter name="Last_Name" value="Smita5"/>   -->
+	<parameter name="Email" value="Suchi5.smita5@gmail.com"/>
 	<parameter name="password" value="Test123"/>
-	<parameter name="Confirmpassword" value="Test123"/>
+	<!-- <parameter name="Confirmpassword" value="Test123"/>  -->
 	<parameter name="Wish_TV_Name" value="LG LCD"/>
-	<parameter name="Message" value="LG LCD"/>
+	<!-- <parameter name="Message" value="LG LCD"/>  -->
 	<classes>
       <class name="com.suchi.Scenarios.EcommerceTest"/>
+      
     </classes>
   </test>
  <!--  <test name="Test2">

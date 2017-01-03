@@ -2,57 +2,16 @@
 <testng-results skipped="0" failed="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Suite" duration-ms="118355" started-at="2017-01-03T10:57:29Z" finished-at="2017-01-03T10:59:27Z">
+  <suite name="Suite" duration-ms="43344" started-at="2017-01-03T18:18:58Z" finished-at="2017-01-03T18:19:41Z">
     <groups>
     </groups>
-    <test name="Test1" duration-ms="118355" started-at="2017-01-03T10:57:29Z" finished-at="2017-01-03T10:59:27Z">
+    <test name="Test1" duration-ms="43344" started-at="2017-01-03T18:18:58Z" finished-at="2017-01-03T18:19:41Z">
       <class name="com.suchi.Scenarios.EcommerceTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.suchi.Scenarios.EcommerceTest@26be92ad]" name="setup" is-config="true" duration-ms="24573" started-at="2017-01-03T16:27:29Z" finished-at="2017-01-03T16:27:54Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.suchi.Scenarios.EcommerceTest@26be92ad]" name="setup" is-config="true" duration-ms="8582" started-at="2017-01-03T23:48:58Z" finished-at="2017-01-03T23:49:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="Test_Account_Creation(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.suchi.Scenarios.EcommerceTest@26be92ad]" name="Test_Account_Creation" duration-ms="73228" started-at="2017-01-03T16:27:54Z" finished-at="2017-01-03T16:29:07Z">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[Suchi1]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[Smita3]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[Suchi1.smita3@gmail.com]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[Test123]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[Test123]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[LG LCD]]>
-              </value>
-            </param>
-            <param index="6">
-              <value>
-                <![CDATA[LG LCD]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Test_Account_Creation -->
-        <test-method status="PASS" signature="test_Home_Page(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.suchi.Scenarios.EcommerceTest@26be92ad]" name="test_Home_Page" duration-ms="18227" started-at="2017-01-03T16:29:07Z" finished-at="2017-01-03T16:29:25Z">
+        <test-method status="PASS" signature="test_Home_Page(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.suchi.Scenarios.EcommerceTest@26be92ad]" name="test_Home_Page" duration-ms="27772" started-at="2017-01-03T23:49:07Z" finished-at="2017-01-03T23:49:34Z">
           <params>
             <param index="0">
               <value>
@@ -83,7 +42,23 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test_Home_Page -->
-        <test-method status="PASS" signature="teardown()[pri:0, instance:com.suchi.Scenarios.EcommerceTest@26be92ad]" name="teardown" is-config="true" duration-ms="2311" started-at="2017-01-03T16:29:25Z" finished-at="2017-01-03T16:29:27Z">
+        <test-method status="PASS" signature="Test_Purchase_Product(java.lang.String, java.lang.String)[pri:0, instance:com.suchi.Scenarios.EcommerceTest@26be92ad]" name="Test_Purchase_Product" duration-ms="4799" started-at="2017-01-03T23:49:34Z" finished-at="2017-01-03T23:49:39Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Suchi5.smita5@gmail.com]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Test123]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_Purchase_Product -->
+        <test-method status="PASS" signature="teardown()[pri:0, instance:com.suchi.Scenarios.EcommerceTest@26be92ad]" name="teardown" is-config="true" duration-ms="2150" started-at="2017-01-03T23:49:39Z" finished-at="2017-01-03T23:49:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->

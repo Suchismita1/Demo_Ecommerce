@@ -91,6 +91,40 @@ public class DashBoard {
 		Assert.assertEquals(actual_sharing_msg, WebUtil.EXP_WISHLIST_SUCCESS_MSG);
 		
 	}
+	public void clickLogout(WebDriver driver) {
+		try{
+			WebElement account_link = driver.findElement(By.linkText("ACCOUNT"));
+			account_link.click();
+			
+			WebElement Logout = driver.findElement(By.xpath("//*[@id='header-account']/div/ul/li[5]/a"));
+			Logout.click();
+		}catch(NoSuchElementException e)
+		{
+			System.out.println("No Logout button found");
+		}
+		
+	}
+	public void clickMyWishList(WebDriver driver) {
+		try{
+			WebElement wishlist = driver.findElement(By.linkText("MY WISHLIST"));
+			wishlist.click();
+			
+		}catch(NoSuchElementException e)
+		{
+			System.out.println("No My WishList link found");
+		}
+		
+	}
+	public void AddProductToCart(WebDriver driver, String wish_TV_Name) {
+		try{
+			String Wished_TV_cart_xpath = "//*[contains(text(),'"+wish_TV_Name+"')]//following::span[contains(text(),'Add to Cart')]";
+			driver.findElement(By.xpath(Wished_TV_cart_xpath)).click();
+		}catch(NoSuchElementException e)
+		{
+			System.out.println("Wished product found");
+		}
+		
+	}
 	
 
 }

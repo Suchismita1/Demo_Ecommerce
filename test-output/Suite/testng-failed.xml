@@ -1,23 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]">
-  <parameter name="First_Name" value="Suchi"/>
+  <parameter name="First_Name" value="Suchi5"/>
   <parameter name="Confirmpassword" value="Test123"/>
   <parameter name="password" value="Test123"/>
+  <parameter name="Wish_TV_Name" value="LG LCD"/>
   <parameter name="quantity" value="502"/>
-  <parameter name="Email" value=""/>
-  <parameter name="Last_Name" value="Smita2"/>
+  <parameter name="Email" value="Suchi5.smita5@gmail.com"/>
+  <parameter name="Message" value="LG LCD"/>
+  <parameter name="Last_Name" value="Smita5"/>
   <parameter name="Sort_Method" value="Name"/>
   <parameter name="Product_Name" value="Sony Xperia"/>
   <parameter name="Product_choice_2" value="IPhone"/>
   <parameter name="Product_choice_1" value="Sony Xperia"/>
   <test name="Test1(failed)">
-    <parameter name="First_Name" value="Suchi"/>
+    <parameter name="First_Name" value="Suchi5"/>
     <parameter name="Confirmpassword" value="Test123"/>
     <parameter name="password" value="Test123"/>
+    <parameter name="Wish_TV_Name" value="LG LCD"/>
     <parameter name="quantity" value="502"/>
-    <parameter name="Email" value=""/>
-    <parameter name="Last_Name" value="Smita2"/>
+    <parameter name="Email" value="Suchi5.smita5@gmail.com"/>
+    <parameter name="Message" value="LG LCD"/>
+    <parameter name="Last_Name" value="Smita5"/>
     <parameter name="Sort_Method" value="Name"/>
     <parameter name="Product_Name" value="Sony Xperia"/>
     <parameter name="Product_choice_2" value="IPhone"/>
@@ -25,7 +29,7 @@
     <classes>
       <class name="com.suchi.Scenarios.EcommerceTest">
         <methods>
-          <include name="test_Home_Page" invocation-numbers="0"/>
+          <include name="Test_Account_Creation" invocation-numbers="0"/>
           <include name="setup"/>
           <include name="teardown"/>
         </methods>
