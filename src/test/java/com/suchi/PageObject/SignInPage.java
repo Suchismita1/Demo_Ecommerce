@@ -36,4 +36,34 @@ public class SignInPage {
 		
 	}
 
+	public void verifyPurchaseOrder(WebDriver driver) {
+		try{
+			String actual_purchase_status_msg = driver.findElement(By.xpath("//*[@id='top']/body/div/div/div[2]/div/div/div[1]/h1")).getText();
+			if(actual_purchase_status_msg.equalsIgnoreCase(WebUtil.EXP_PURCHASE_STATUS_MSG)){
+				String purchase_order = getPurchaseOrder(driver);
+				System.out.println("Your Purchase order no is : "+purchase_order);
+			}
+			else
+			{
+				System.out.println("Purchase unsuccessful");
+			}
+		}catch(NoSuchElementException e)
+		{
+			System.out.println("No Order Placed successfully");
+		}
+		
+	}
+
+	public String getPurchaseOrder(WebDriver driver) {
+		String purchase_order = null;
+		try{
+		purchase_order = driver.findElement(By.xpath("//*[@id='top']/body/div/div/div[2]/div/div/p[1]/a")).getText();
+		}catch(NoSuchElementException e)
+		{
+			System.out.println("No Purchase Order found");
+		}
+		
+		return purchase_order;
+	}
+
 }

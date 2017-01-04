@@ -15,6 +15,7 @@ import org.testng.annotations.Test;
 
 import com.gargoylesoftware.htmlunit.Page;
 import com.suchi.PageObject.AccountPage;
+import com.suchi.PageObject.CheckoutPage;
 import com.suchi.PageObject.CreateAccountPage;
 import com.suchi.PageObject.DashBoard;
 import com.suchi.PageObject.MobilePage;
@@ -35,16 +36,16 @@ public class EcommerceTest {
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(WebUtil.WAIT_TIME, TimeUnit.SECONDS);
 	}
-	@Parameters({"Sort_Method","Product_Name","quantity","Product_choice_1","Product_choice_2"})
-	@Test(priority=1)
+	/*@Parameters({"Sort_Method","Product_Name","quantity","Product_choice_1","Product_choice_2"})
+	@Test
 	public void test_Home_Page(String Sort_Method,String Product_Name, String quantity, String Product_choice_1, String Product_choice_2) throws Exception{
-		/*DAY1 SCENARIOS:
+		DAY1 SCENARIOS:
 			1.  Go to http://live.guru99.com/index.php/
 			2.  Verify title of the page
 			3.  click on "Mobile" menu
 			4.  Verify title of the page
 			5.  In the list of all Mobile, Select Sort by dropdown as "name"
-			6.  Verify all product are sorted by name*/
+			6.  Verify all product are sorted by name
 		
 		//Goto URL
 		SignInPage signinPage = WebUtil.getSigninPage(driver);
@@ -68,13 +69,13 @@ public class EcommerceTest {
 		//Verify the list of product are sorted alphabetically
 		mobilePage.verifyProductSorting(driver,ProductList);
 	
-		/*DAY2 SCENARIOS:
+		DAY2 SCENARIOS:
 			1.  Go to http://live.guru99.com/index.php/
 			2.  click on "Mobile" menu
 			3.  In the list of all mobile, read the cost of Sony Xperia mobile and note this value.
 			4.  Click on sony xperia mobile
 			5.  Read the sony xperia mobile from detail Page.
-			6.  compare value in step 3 and step 5*/
+			6.  compare value in step 3 and step 5
 		
 		//Read the user's choice mobile cost
 		String Visible_Price = mobilePage.searchProductCost(driver,ProductList,Product_Name);
@@ -88,14 +89,14 @@ public class EcommerceTest {
 		//Verify the detail price of product with visible product price on Mobile home page
 		Assert.assertEquals(Actual_price, Visible_Price);
 		
-		/*DAY3 SCENARIOS:
+		DAY3 SCENARIOS:
 		1.  Go to http://live.guru99.com/index.php/
 		2.  click on "Mobile" menu
 		3.  in the list of the mobile, click on "ADD TO CART" for sony xperia mobile
 		4.  change quantity to 1000 and click 'UPDATE' button
 		5.  verify the error message
 		6.  Click on the 'EMPTY CART' link 
-		7.  verify cart is EMPTY */
+		7.  verify cart is EMPTY 
 		
 		//Navigate to Mobile page
 		WebUtil.navigateBackMenu(driver);
@@ -106,13 +107,13 @@ public class EcommerceTest {
 		//Send quantity to the quantity input box
 		shoppingCart.addQuantity(driver, quantity);
 		
-		/*DAY4 SCENARIOS:
+		DAY4 SCENARIOS:
 		1.  Go to http://live.guru99.com/index.php/
 		2.  click on "Mobile" menu
 		3.  In the mobile products list, click on 'Add to compare' for 2 mobiles
 		4.  click on 'COMAPRE' button
 		5.  verify the pop-up window and check that the products are reflected
-		6.  close the pop-up windows*/
+		6.  close the pop-up windows
 		
 		//Navigate to Mobile Page
 		signinPage.clickMobileMenu(driver);
@@ -124,7 +125,7 @@ public class EcommerceTest {
 		mobilePage.clickCompareButton(driver);
 				
 			
-	}
+	}*/
 	
 	/*DAY5 SCENARIOS:
 	1.  Go to http://live.guru99.com/index.php/
@@ -139,8 +140,8 @@ public class EcommerceTest {
 	10. Check wishlist is shared */
 	
 	/*@Parameters({"First_Name","Last_Name","Email","password","Confirmpassword","Wish_TV_Name","Message"})
-	@Test(priority=2)
-	public void Test_Account_Creation(String First_Name, String Last_Name, String Email, String password, String Confirmpassword, String Wish_TV_Name, String Message) throws Exception
+	@Test
+	public void Test_Account_Creation(String First_Name, String Last_Name, String Email, String password, String Confirmpassword, String Wish_TV_Name, String Message)
 	{
 		//Goto URL
 		SignInPage signinPage = WebUtil.getSigninPage(driver);
@@ -168,16 +169,15 @@ public class EcommerceTest {
 		
 		//Check wishlist is shared
 		dashboard.verifySharing(driver);
-		
-		//Click on Logout
-		dashboard.clickLogout(driver);
-	}*/
-	
+	}
+	*/
 	/*DAY6 SCENARIOS:
-	 * Verify user is able to purchase product using registered email id */
-	@Parameters({"Email","password","Wish_TV_Name"})
+	 * Verify user is able to purchase product using registered email id
+	*/
+	
+	@Parameters({"Email","password","Wish_TV_Name","First_Name","Last_Name","Address","City","State","Zip","Country","Telephone"})
 	@Test(priority=3)
-	public void Test_Purchase_Product(String Email, String password, String Wish_TV_Name) throws Exception
+	public void Test_Purchase_Product(String Email, String password, String Wish_TV_Name, String First_Name, String Last_Name, String Address, String City, String State,String Zip, String Country, String Telephone) throws Exception
 	{
 		
 		//  Go to http://live.guru99.com/index.php/
@@ -195,7 +195,26 @@ public class EcommerceTest {
 		//Click Add to cart to the respective product
 		dashboard.AddProductToCart(driver,Wish_TV_Name);
 		
+		//Click Proceed to Checkout
+		CheckoutPage checkout = dashboard.ClickProceedToCheckout(driver);
 		
+		//Enter Billing and shipping information
+		checkout.enterBillingDetails(driver,First_Name,Last_Name,Address,City,State,Zip,Country,Telephone);
+		
+		//Click Continue at Shipping Method
+		checkout.clickShippingContinue(driver);
+		
+		//Check Payment Method
+		checkout.selectCheckPaymentMethod(driver);
+		
+		//Review product name in order Review
+		checkout.ReviewProductName(driver,Wish_TV_Name);
+		
+		//Place order
+		signinPage = checkout.clickToPlaceOrder(driver);
+		
+		//Verify Order generated
+		signinPage.verifyPurchaseOrder(driver);
 	}
 	
 	@AfterTest

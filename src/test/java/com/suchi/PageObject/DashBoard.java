@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
 
 import com.suchi.UtilPage.WebUtil;
@@ -121,8 +122,19 @@ public class DashBoard {
 			driver.findElement(By.xpath(Wished_TV_cart_xpath)).click();
 		}catch(NoSuchElementException e)
 		{
-			System.out.println("Wished product found");
+			System.out.println("No Wished product found");
 		}
+		
+	}
+	public CheckoutPage ClickProceedToCheckout(WebDriver driver) {
+		try{
+			WebElement checkout_button = driver.findElement(By.xpath("//*[contains(text(),'Proceed to Checkout')]"));
+			checkout_button.click();
+		}catch(NoSuchElementException e)
+		{
+			System.out.println("No product found to checkout");
+		}
+		return PageFactory.initElements(driver, CheckoutPage.class);
 		
 	}
 	

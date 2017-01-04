@@ -39,6 +39,8 @@ public class WebUtil {
 	
 	public static final String EXP_WISHLIST_SUCCESS_MSG = "Your Wishlist has been shared.";
 	
+	public static final String EXP_PURCHASE_STATUS_MSG = "Your order has been received.";
+	
 	public MobilePage mobilePage;
 	public ProductPage productPage;
 	
@@ -62,6 +64,13 @@ public class WebUtil {
 
 	public static void navigateBackMenu(WebDriver driver) {
 		driver.navigate().back();
+		
+	}
+	
+	public static void sendInput(WebDriver driver, By by, String value) {
+		WebElement element = driver.findElement(by);
+		element.clear();
+		element.sendKeys(value);
 		
 	}
 	
