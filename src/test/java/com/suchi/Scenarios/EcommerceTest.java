@@ -20,6 +20,7 @@ import com.suchi.PageObject.CreateAccountPage;
 import com.suchi.PageObject.DashBoard;
 import com.suchi.PageObject.MobilePage;
 import com.suchi.PageObject.ProductPage;
+import com.suchi.PageObject.ShippingPage;
 import com.suchi.PageObject.ShoppingCartPage;
 import com.suchi.PageObject.SignInPage;
 import com.suchi.UtilPage.WebUtil;
@@ -199,19 +200,20 @@ public class EcommerceTest {
 		CheckoutPage checkout = dashboard.ClickProceedToCheckout(driver);
 		
 		//Enter Billing and shipping information
-		checkout.enterBillingDetails(driver,First_Name,Last_Name,Address,City,State,Zip,Country,Telephone);
+		ShippingPage shippingPage =  checkout.enterBillingDetails(driver,First_Name,Last_Name,Address,City,State,Zip,Country,Telephone); //This is where problem is coming
 		
 		//Click Continue at Shipping Method
-		checkout.clickShippingContinue(driver);
+		shippingPage.clickShippingContinue(driver);
+		Thread.sleep(3000);
 		
 		//Check Payment Method
-		checkout.selectCheckPaymentMethod(driver);
+		shippingPage.selectCheckPaymentMethod(driver);
 		
 		//Review product name in order Review
-		checkout.ReviewProductName(driver,Wish_TV_Name);
+		shippingPage.ReviewProductName(driver,Wish_TV_Name);
 		
 		//Place order
-		signinPage = checkout.clickToPlaceOrder(driver);
+		signinPage = shippingPage.clickToPlaceOrder(driver);
 		
 		//Verify Order generated
 		signinPage.verifyPurchaseOrder(driver);

@@ -5,7 +5,7 @@
     <classes>
       <class name="com.suchi.Scenarios.EcommerceTest">
         <methods>
-          <include name="test_Home_Page"/>
+          <include name="Test_Purchase_Product"/>
           <include name="setup"/>
           <include name="teardown"/>
         </methods>
