@@ -33,7 +33,7 @@ public class CheckoutPage {
 			
 			
 			//Send State
-			WebDriverWait wait = new WebDriverWait(driver,10);
+			WebDriverWait wait = new WebDriverWait(driver,30);
 			WebElement Select_state = wait.until(ExpectedConditions.presenceOfElementLocated(By.id("billing:region_id")));
 			Select State_id = new Select(Select_state);
 			State_id.selectByVisibleText(State);
@@ -63,7 +63,7 @@ public class CheckoutPage {
 			{
 				//Click Continue button
 				//clickContinueButton(driver);
-				WebElement Ship_Continue_button = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//div[@id='billing-buttons-container']//button[@title='Continue']")));
+				WebElement Ship_Continue_button = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@id='billing-buttons-container']//button[@title='Continue']")));
 				Ship_Continue_button.click();
 			}
 			else

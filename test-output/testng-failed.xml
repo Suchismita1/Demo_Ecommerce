@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]">
-  <parameter name="First_Name" value="Suchi3"/>
+  <parameter name="First_Name" value="Suchi1"/>
   <parameter name="Zip" value="123456"/>
   <parameter name="password" value="Test123"/>
   <parameter name="Wish_TV_Name" value="LG LCD"/>
-  <parameter name="Email" value="Suchi3.smita4@gmail.com"/>
+  <parameter name="Email" value="Suchi1.smita2@gmail.com"/>
   <parameter name="Address" value="Hyd"/>
   <parameter name="Telephone" value="1234567893"/>
-  <parameter name="Last_Name" value="Smita4"/>
+  <parameter name="Last_Name" value="Smita2"/>
   <parameter name="State" value="Alabama"/>
   <parameter name="Country" value="United States"/>
   <parameter name="City" value="Miyapur"/>
   <test name="Test1(failed)">
-    <parameter name="First_Name" value="Suchi3"/>
+    <parameter name="First_Name" value="Suchi1"/>
     <parameter name="Zip" value="123456"/>
     <parameter name="password" value="Test123"/>
     <parameter name="Wish_TV_Name" value="LG LCD"/>
-    <parameter name="Email" value="Suchi3.smita4@gmail.com"/>
+    <parameter name="Email" value="Suchi1.smita2@gmail.com"/>
     <parameter name="Address" value="Hyd"/>
     <parameter name="Telephone" value="1234567893"/>
-    <parameter name="Last_Name" value="Smita4"/>
+    <parameter name="Last_Name" value="Smita2"/>
     <parameter name="State" value="Alabama"/>
     <parameter name="Country" value="United States"/>
     <parameter name="City" value="Miyapur"/>

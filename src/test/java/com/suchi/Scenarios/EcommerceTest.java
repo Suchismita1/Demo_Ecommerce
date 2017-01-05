@@ -140,7 +140,7 @@ public class EcommerceTest {
 	9.  In the next page enter Email and message and click SHARE WISHLIST
 	10. Check wishlist is shared */
 	
-	/*@Parameters({"First_Name","Last_Name","Email","password","Confirmpassword","Wish_TV_Name","Message"})
+	@Parameters({"First_Name","Last_Name","Email","password","Confirmpassword","Wish_TV_Name","Message"})
 	@Test
 	public void Test_Account_Creation(String First_Name, String Last_Name, String Email, String password, String Confirmpassword, String Wish_TV_Name, String Message)
 	{
@@ -170,8 +170,11 @@ public class EcommerceTest {
 		
 		//Check wishlist is shared
 		dashboard.verifySharing(driver);
+		
+		//Click logout button
+		dashboard.clickLogout(driver);
 	}
-	*/
+	
 	/*DAY6 SCENARIOS:
 	 * Verify user is able to purchase product using registered email id
 	*/

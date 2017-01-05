@@ -5,6 +5,8 @@ import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import com.suchi.UtilPage.WebUtil;
@@ -38,7 +40,9 @@ public class SignInPage {
 
 	public void verifyPurchaseOrder(WebDriver driver) {
 		try{
-			String actual_purchase_status_msg = driver.findElement(By.xpath("//*[@id='top']/body/div/div/div[2]/div/div/div[1]/h1")).getText();
+			WebDriverWait wait = new WebDriverWait(driver,30);
+			String actual_purchase_status_msg = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@class='page-title']"))).getText();
+			//System.out.println(actual_purchase_status_msg);
 			if(actual_purchase_status_msg.equalsIgnoreCase(WebUtil.EXP_PURCHASE_STATUS_MSG)){
 				String purchase_order = getPurchaseOrder(driver);
 				System.out.println("Your Purchase order no is : "+purchase_order);

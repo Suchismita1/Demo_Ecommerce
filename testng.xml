@@ -7,13 +7,13 @@
 	<parameter name="quantity" value="502"/>
 	<parameter name="Product_choice_1" value="Sony Xperia"/>
 	<parameter name="Product_choice_2" value="IPhone"/>  -->
-	<parameter name="First_Name" value="Suchi3"/>
-	<parameter name="Last_Name" value="Smita4"/>
-	<parameter name="Email" value="Suchi3.smita4@gmail.com"/>
+	<parameter name="First_Name" value="Suchi7"/>
+	<parameter name="Last_Name" value="Smita7"/>
+	<parameter name="Email" value="Suchi7.smita7@gmail.com"/>
 	<parameter name="password" value="Test123"/>
-	<!-- <parameter name="Confirmpassword" value="Test123"/>  -->
+	<parameter name="Confirmpassword" value="Test123"/>
 	<parameter name="Wish_TV_Name" value="LG LCD"/>
-	<!-- <parameter name="Message" value="LG LCD"/>  -->
+	<parameter name="Message" value="LG LCD"/>
 	<parameter name="Address" value="Hyd"/>
 	<parameter name="City" value="Miyapur"/>
 	<parameter name="State" value="Alabama"/>

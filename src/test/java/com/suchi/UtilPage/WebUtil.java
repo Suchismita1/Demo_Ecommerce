@@ -39,7 +39,7 @@ public class WebUtil {
 	
 	public static final String EXP_WISHLIST_SUCCESS_MSG = "Your Wishlist has been shared.";
 	
-	public static final String EXP_PURCHASE_STATUS_MSG = "Your order has been received.";
+	public static final String EXP_PURCHASE_STATUS_MSG = "CHECKOUT";
 	
 	public MobilePage mobilePage;
 	public ProductPage productPage;
