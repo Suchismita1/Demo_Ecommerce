@@ -1,5 +1,7 @@
 package com.suchi.PageObject;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
@@ -135,6 +137,42 @@ public class DashBoard {
 			System.out.println("No product found to checkout");
 		}
 		return PageFactory.initElements(driver, CheckoutPage.class);
+		
+	}
+	public void clickMyOrder(WebDriver driver) {
+		try{
+			WebElement MyOrderLink = driver.findElement(By.linkText("MY ORDERS"));
+			MyOrderLink.click();
+		}catch(NoSuchElementException e)
+		{
+			System.out.println("MyOrder link not found");
+		}
+		
+	}
+	public OrderPage checkOrderStatusandClickViewOrder(WebDriver driver) {
+		try{
+			
+			List<WebElement> ordered_Products = driver.findElements(By.xpath("//*[@id='my-orders-table']//tbody//following::tr/td[@class='number']"));
+			System.out.println(ordered_Products.size());
+			for(int i=0; i<ordered_Products.size();i++)
+			{
+				String Order_number = ordered_Products.get(i).getText();
+				String status_xpath = "//*[contains(text(),'"+Order_number+"')]//following::td[@class='status']";
+				String ViewOrder_xpath="//*[contains(text(),'"+Order_number+"')]//following::a[contains(text(),'View Order')]";
+				
+				String order_status = driver.findElement(By.xpath(status_xpath)).getText();
+				Assert.assertEquals(order_status, "Pending");
+				
+				//Click on ViewOrder link
+				driver.findElement(By.xpath(ViewOrder_xpath)).click();
+				//driver.navigate().back();
+			}
+			
+		}catch(NoSuchElementException e)
+		{
+			System.out.println("No Product is ordered");
+		}
+		return PageFactory.initElements(driver, OrderPage.class);
 		
 	}
 	

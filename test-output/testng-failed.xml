@@ -1,33 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Suite]">
-  <parameter name="First_Name" value="Suchi1"/>
   <parameter name="Zip" value="123456"/>
-  <parameter name="password" value="Test123"/>
+  <parameter name="Confirmpassword" value="Test123"/>
   <parameter name="Wish_TV_Name" value="LG LCD"/>
-  <parameter name="Email" value="Suchi1.smita2@gmail.com"/>
+  <parameter name="Email" value="Suchi5.smita5@gmail.com"/>
+  <parameter name="Message" value="LG LCD"/>
   <parameter name="Address" value="Hyd"/>
   <parameter name="Telephone" value="1234567893"/>
-  <parameter name="Last_Name" value="Smita2"/>
+  <parameter name="City" value="Miyapur"/>
+  <parameter name="First_Name" value="Suchi8"/>
+  <parameter name="password" value="Test123"/>
+  <parameter name="Last_Name" value="Smita8"/>
   <parameter name="State" value="Alabama"/>
   <parameter name="Country" value="United States"/>
-  <parameter name="City" value="Miyapur"/>
   <test name="Test1(failed)">
-    <parameter name="First_Name" value="Suchi1"/>
     <parameter name="Zip" value="123456"/>
-    <parameter name="password" value="Test123"/>
+    <parameter name="Confirmpassword" value="Test123"/>
     <parameter name="Wish_TV_Name" value="LG LCD"/>
-    <parameter name="Email" value="Suchi1.smita2@gmail.com"/>
+    <parameter name="Email" value="Suchi5.smita5@gmail.com"/>
+    <parameter name="Message" value="LG LCD"/>
     <parameter name="Address" value="Hyd"/>
     <parameter name="Telephone" value="1234567893"/>
-    <parameter name="Last_Name" value="Smita2"/>
+    <parameter name="City" value="Miyapur"/>
+    <parameter name="First_Name" value="Suchi8"/>
+    <parameter name="password" value="Test123"/>
+    <parameter name="Last_Name" value="Smita8"/>
     <parameter name="State" value="Alabama"/>
     <parameter name="Country" value="United States"/>
-    <parameter name="City" value="Miyapur"/>
     <classes>
       <class name="com.suchi.Scenarios.EcommerceTest">
         <methods>
-          <include name="Test_Purchase_Product" invocation-numbers="0"/>
+          <include name="Test_Printing_Order" invocation-numbers="0"/>
           <include name="setup"/>
           <include name="teardown"/>
         </methods>

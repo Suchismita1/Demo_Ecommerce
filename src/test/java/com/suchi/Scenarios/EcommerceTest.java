@@ -19,6 +19,7 @@ import com.suchi.PageObject.CheckoutPage;
 import com.suchi.PageObject.CreateAccountPage;
 import com.suchi.PageObject.DashBoard;
 import com.suchi.PageObject.MobilePage;
+import com.suchi.PageObject.OrderPage;
 import com.suchi.PageObject.ProductPage;
 import com.suchi.PageObject.ShippingPage;
 import com.suchi.PageObject.ShoppingCartPage;
@@ -140,7 +141,7 @@ public class EcommerceTest {
 	9.  In the next page enter Email and message and click SHARE WISHLIST
 	10. Check wishlist is shared */
 	
-	@Parameters({"First_Name","Last_Name","Email","password","Confirmpassword","Wish_TV_Name","Message"})
+	/*@Parameters({"First_Name","Last_Name","Email","password","Confirmpassword","Wish_TV_Name","Message"})
 	@Test
 	public void Test_Account_Creation(String First_Name, String Last_Name, String Email, String password, String Confirmpassword, String Wish_TV_Name, String Message)
 	{
@@ -173,13 +174,13 @@ public class EcommerceTest {
 		
 		//Click logout button
 		dashboard.clickLogout(driver);
-	}
+	}*/
 	
 	/*DAY6 SCENARIOS:
 	 * Verify user is able to purchase product using registered email id
 	*/
 	
-	@Parameters({"Email","password","Wish_TV_Name","First_Name","Last_Name","Address","City","State","Zip","Country","Telephone"})
+	/*@Parameters({"Email","password","Wish_TV_Name","First_Name","Last_Name","Address","City","State","Zip","Country","Telephone"})
 	@Test(priority=3)
 	public void Test_Purchase_Product(String Email, String password, String Wish_TV_Name, String First_Name, String Last_Name, String Address, String City, String State,String Zip, String Country, String Telephone) throws Exception
 	{
@@ -220,6 +221,33 @@ public class EcommerceTest {
 		
 		//Verify Order generated
 		signinPage.verifyPurchaseOrder(driver);
+		
+		//Click logout button
+		dashboard.clickLogout(driver);
+	}*/
+	/* DAY7 SCENARIO : Verify that you will be able to save previously placed order as a pdf file*/
+	@Parameters({"Email","password"})
+	@Test
+	public void Test_Printing_Order(String Email, String password) throws Exception
+	{
+		//  Go to http://live.guru99.com/index.php/
+		SignInPage signinPage = WebUtil.getSigninPage(driver);
+			
+		//Click on 'MY ACCOUNT' link
+		AccountPage accountPage = signinPage.clcikMyAccount(driver);
+		
+		//Login in application using previously created user details
+		DashBoard dashboard = accountPage.click_Account_Login(driver,Email,password);
+		
+		//Click on MyOrder link
+		dashboard.clickMyOrder(driver);
+		
+		//Check the status of the order product and click on view order
+		OrderPage orderPage = dashboard.checkOrderStatusandClickViewOrder(driver);
+		
+		//Click on Print Order link
+		orderPage.clickPrintOrder(driver);
+			
 	}
 	
 	@AfterTest
